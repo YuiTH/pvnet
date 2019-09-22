@@ -1,3 +1,4 @@
+#%%
 import sys
 
 sys.path.append('.')
@@ -27,7 +28,7 @@ train_cfg['model_name'] = '{}_{}'.format('cat', train_cfg['model_name'])
 
 vote_num = 9
 
-
+#%%
 class NetWrapper(nn.Module):
     def __init__(self, net):
         super(NetWrapper, self).__init__()
@@ -182,8 +183,11 @@ def demo():
     bb8_2d_pred = projector.project(bb8_3d, pose_pred, 'linemod')
     bb8_2d_gt = projector.project(bb8_3d, pose[0].detach().cpu().numpy(), 'linemod')
     image = imagenet_to_uint8(image.detach().cpu().numpy())[0]
-    visualize_bounding_box(image[None, ...], bb8_2d_pred[None, None, ...], bb8_2d_gt[None, None, ...])
+    visualize_bounding_box(image[None, ...], bb8_2d_pred[None, None, ...], bb8_2d_gt[None, None, ...],save=False,save_fn="cat_{}.png")
 
 
 if __name__ == "__main__":
     demo()
+
+
+

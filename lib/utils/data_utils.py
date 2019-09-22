@@ -169,7 +169,9 @@ class LineModImageDB(object):
     rnd_typ 'real' or 'render'
     corner  np.float32 [8,2]
     '''
-    def __init__(self, cls_name, render_num=10000, fuse_num=10000, ms_num=10000,
+
+# Important!
+    def __init__(self, cls_name, render_num=10, fuse_num=10, ms_num=10,
                  has_render_set=True, has_fuse_set=True):
         self.cls_name=cls_name
 

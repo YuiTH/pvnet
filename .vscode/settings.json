@@ -1,0 +1,4 @@
+{
+    "python.linting.enabled": false,
+    "python.pythonPath": "/root/anaconda3/envs/pvnet/bin/python"
+}

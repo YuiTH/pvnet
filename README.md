@@ -53,7 +53,7 @@ If you cannot install `libsuitesparse-dev=1:4.4.6-1`, please install `libsuitesp
 Add the `lib` under `extend_utils` to the LD_LIBRARY_PATH
 
 ```
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/path/to/pvnet/lib/utils/extend_utils/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)/lib/utils/extend_utils/lib
 ```
 
 ## Dataset Configuration
